@@ -99,14 +99,15 @@ textarea {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     z-index: 10;
-
     border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
 .nav-logo {
+    position: absolute;
+    left: 7%;
     font-family: var(--font-heading);
     font-size: 35px;
 }
@@ -118,6 +119,8 @@ textarea {
 
 .nav-links {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 40px;
 }
 
@@ -1548,49 +1551,40 @@ textarea {
 .rsvp-buttons {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 14px;
+    width: 100%;
     max-width: 390px;
     margin: 38px auto 0;
 }
 
-.rsvp-buttons .submit-button {
+.rsvp-buttons .submit-button,
+.rsvp-buttons .rsvp-no-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    box-sizing: border-box;
     width: 100%;
     min-height: 58px;
+    margin: 0;
+    text-align: center;
     text-decoration: none;
+}
+
+.rsvp-buttons .submit-button {
+    gap: 12px;
     cursor: pointer;
 }
 
 .rsvp-no-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 56px;
     padding: 14px 20px;
-    border: 1px solid rgba(201, 172, 126, 0.4);
+    border: 1px solid rgba(201, 172, 126, .4);
     color: #d6c8b2;
-    text-decoration: none;
     font-size: 14px;
-    transition: 0.3s ease;
+    transition: .3s ease;
 }
 
 .rsvp-no-button:hover {
-    background: rgba(201, 172, 126, 0.1);
+    background: rgba(201, 172, 126, .1);
     border-color: #c9ac7e;
-}
-
-.rsvp-note {
-    margin-top: 30px;
-    color: #a99b83;
-    font-size: 13px;
-    letter-spacing: 0.04em;
-}
-
-@media (max-width: 768px) {
-    .rsvp-buttons {
-        max-width: 100%;
-    }
 }
